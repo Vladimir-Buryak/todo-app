@@ -1,0 +1,335 @@
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  line-height: 1;
+  font-size: 14px;
+  scroll-behavior: smooth;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+  padding: 0;
+}
+
+/*--------------------*/
+body {
+  background-color: #232323;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #FC9D23;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.container {
+  margin: 250px 40px 0;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 40px 30px;
+  background-color: #232323;
+}
+
+.header-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 20px;
+}
+.header-top .logo h1 {
+  font-family: "Poppins", sans-serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: calc(20px + 17 * ((100vw - 320px) / 1360));
+  text-align: right;
+  line-height: 108.1081081081%;
+  color: #FFFFFF;
+}
+.header-top .logo h2 {
+  font-family: "Poppins", sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: calc(23px + 11 * ((100vw - 320px) / 1360));
+  line-height: 114.2857142857%;
+  text-align: right;
+  letter-spacing: 0.23em;
+  color: #FFFFFF;
+}
+.header-top .user {
+  display: grid;
+  -webkit-column-gap: 28px;
+     -moz-column-gap: 28px;
+          column-gap: 28px;
+  grid-template-areas: "name logout" "gmail logout";
+  grid-template-rows: repeat(2, auto);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  justify-items: end;
+}
+.header-top .user .user__name {
+  grid-area: name;
+}
+.header-top .user .user__name h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: calc(17px + 8 * ((100vw - 320px) / 1360));
+  line-height: 152%;
+  letter-spacing: 0.005em;
+  color: #FFFFFF;
+}
+.header-top .user .user__gmail {
+  grid-area: gmail;
+}
+.header-top .user .user__gmail h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: calc(14px + 2 * ((100vw - 320px) / 1360));
+  line-height: 150%;
+  letter-spacing: 0.055em;
+  color: #5D5D5D;
+}
+.header-top .user .user__logout {
+  grid-area: logout;
+}
+
+.hr-style {
+  width: 30%;
+  height: 2px;
+  background-color: #333333;
+  margin: 0 auto;
+}
+
+.header-bottom {
+  margin-top: 40px;
+}
+.header-bottom .add-task {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.header-bottom .add-task .add-task__input {
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+  height: 51px;
+  border-radius: 7px 0 0 7px;
+  font-size: 20px;
+  padding: 0 20px;
+}
+.header-bottom .add-task button {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 107.6923076923%;
+  letter-spacing: 0.005em;
+  color: #FFFFFF;
+  padding: 0 30px;
+  border-radius: 0 7px 7px 0;
+  background-color: #FC9D23;
+}
+.header-bottom .add-task button:hover {
+  background-color: #FFB411;
+}
+.header-bottom .add-task button:active {
+  background-color: #dd9700;
+}
+
+.task-list__item {
+  display: grid;
+  grid-template: minmax(70px, auto)/55px auto 55px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 50px;
+}
+.task-list__item .task-list__button-status {
+  height: 100%;
+  padding: 0 12px;
+  background-color: #3C3C3C;
+  border-radius: 5px 0 0 5px;
+}
+.task-list__item .task-list__button-status svg {
+  stroke: #6C6C6C;
+}
+.task-list__item .task-list__text {
+  padding: 0 20px 0 20px;
+}
+.task-list__item .task-list__text p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: calc(16px + 4 * ((100vw - 320px) / 1360));
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  color: #FFFFFF;
+  word-wrap: break-word;
+}
+.task-list__item .task-list__button-delete {
+  height: 100%;
+  padding: 0 12px;
+  background-color: #3C3C3C;
+  border-radius: 0 5px 5px 0;
+}
+
+.enabled .task-list__button-status svg {
+  stroke: #23CD29;
+}
+.enabled .task-list__text p {
+  text-decoration: line-through;
+}
+
+/* ----------------- адаптивність --------------------------- */
+@media screen and (max-width: 768px) {
+  .container {
+    margin: 210px 17px 0;
+  }
+  .header {
+    padding: 20px 17px 30px;
+  }
+  .user__logout img {
+    width: 40px;
+  }
+  .header-bottom {
+    margin-top: 26px;
+  }
+  .header-bottom .add-task .add-task__input {
+    font-size: 19px;
+    height: 45px;
+  }
+  .header-bottom .add-task .add-task__button {
+    font-size: 17px;
+  }
+  .task-list__button-status svg {
+    width: 25px;
+  }
+  .task-list__button-delete img {
+    width: 25px;
+  }
+}
+@media screen and (max-width: 462px) {
+  .container {
+    margin: 190px 15px 0;
+  }
+  .header {
+    padding: 20px 15px 30px;
+  }
+  .header-bottom .add-task button {
+    padding: 0 19px;
+  }
+  .header-top .user {
+    -webkit-column-gap: 14px;
+       -moz-column-gap: 14px;
+            column-gap: 14px;
+  }
+  .task-list__item {
+    grid-template: minmax(60px, auto)/55px auto 55px;
+  }
+  .task-list__item {
+    padding-bottom: 50px;
+  }
+  .task-list__button-status svg {
+    width: 20px;
+  }
+  .task-list__button-delete img {
+    width: 20px;
+  }
+}/*# sourceMappingURL=dashboard.css.map */

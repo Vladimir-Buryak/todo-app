@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <%- include("./partials/head.ejs")%>
+      <link rel="stylesheet" href="style/dashboard.css">
+</head>
+
+<body>
+   <div class="wrapper">
+      <div class="container">
+          <button class="button__info-user"></button>
+         <header class="header">
+            <div class="header-top">
+               <div class="logo">
+                  <h1 class="logo__title">TO-DO</h1>
+                  <h2 class="logo__sub-title">List</h2>
+               </div>
+               <div class="user">
+                  <div class="user__name">
+                     <h2 class="user__name-text"></h2>
+                  </div>
+                  <div class="user__gmail">
+                     <h2 class="user__gmail-text"></h2>
+                  </div>
+                  <div class="user__logout">
+                     <img src="image/log-out.svg" alt="logout">
+                  </div>
+               </div>
+            </div>
+            <hr class="hr-style">
+            <div class="header-bottom">
+               <div class="add-task">
+                  <input class="add-task__input" type="text" placeholder="Завдання">
+                  <button class="add-task__button">Додати</button>
+               </div>
+            </div>
+         </header>
+         <main class="main">
+            <div class="task-list">
+               <div class="task-list__row"></div>
+            </div>
+         </main>
+      </div>
+   </div>
+   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+   <script type="module" src="javascript/dashboard.js"></script>
+</body>
+
+</html>

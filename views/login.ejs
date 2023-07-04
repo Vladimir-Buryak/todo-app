@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+   <%- include("./partials/head.ejs")%>
+      <link rel="stylesheet" href="style/auth.css">
+</head>
+
+<body>
+   <div class="wrapper">
+      <div class="container">
+         <div class="auth">
+            <div class="auth__logo">
+               <div class="auth__titel">
+                  <h1>TO-DO</h1>
+                  <h2>List</h2>
+               </div>
+            </div>
+            <hr class="auth__line">
+            <form class="auth__form" action="#" id="form" novalidate>
+               <div class="auth__form-block">
+                  <div class="auth__form-items">
+                     <h2 class="auth__input-titel">Email</h2>
+                     <input class="auth__input" type="email" name="email" placeholder="name@gmail.com">
+                  </div>
+               </div>
+               <div class="auth__form-block">
+                  <div class="auth__form-items">
+                     <h2 class="auth__input-titel">Пароль</h2>
+                     <input class="auth__input" type="password" name="password" placeholder="пароль">
+                     <img class="auth__icon auth__icon--visible" src="image/pass-off.svg" alt="icon">
+                  </div>
+               </div>
+               <button class="auth__button">
+                  Увійти
+               </button>
+            </form>
+            <hr class="auth__line">
+            <div class="auth__link">
+               <a href="/signup"><img class="auth__link-img auth__link-img--margin-right" src="image/signup.svg"
+                     alt="signup">Зареєструватися </a>
+            </div>
+         </div>
+      </div>
+   </div>
+   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+   <script type="module" src="javascript/login.js"></script>
+</body>
+
+</html>

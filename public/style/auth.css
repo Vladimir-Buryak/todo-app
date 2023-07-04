@@ -1,0 +1,309 @@
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  line-height: 1;
+  font-size: 14px;
+  scroll-behavior: smooth;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+  padding: 0;
+}
+
+/*--------------------*/
+.auth__form-items input[type=text],
+.auth__form-items input[type=password],
+.auth__form-items input[type=email], .auth__form-items .auth__input-titel {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  line-height: 150%;
+  width: 100%;
+  color: #403A4B;
+}
+
+.auth__button {
+  width: 100%;
+  height: 40px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 150%;
+  border-radius: 7px;
+  color: #FFFFFF;
+}
+
+.auth__line, .auth__sub-titel hr {
+  width: 100%;
+  height: 2px;
+  background-color: #333333;
+}
+
+._error {
+  border: 2px solid rgb(214, 1, 1);
+}
+
+.paragraph-error {
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  line-height: 138.4615384615%;
+  width: 100%;
+  padding-top: 3px;
+  color: #FB9205;
+  padding-left: 3px;
+}
+
+body {
+  background-color: #232323;
+}
+
+.container {
+  width: 400px;
+  padding: 0 20px;
+  margin: 30px 0;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.auth__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.auth__titel h1 {
+  font-family: "Poppins", sans-serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: calc(30px + 10 * ((100vw - 320px) / 1360));
+  text-align: right;
+  line-height: 100%;
+  color: #FFFFFF;
+}
+.auth__titel h2 {
+  font-family: "Poppins", sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: calc(27px + 9 * ((100vw - 320px) / 1360));
+  line-height: 111.1111111111%;
+  text-align: right;
+  letter-spacing: 0.23em;
+  color: #FFFFFF;
+}
+
+.auth__sub-titel {
+  margin: 26px 0 29px 0;
+}
+.auth__sub-titel h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: calc(17px + 3 * ((100vw - 320px) / 1360));
+  line-height: 150%;
+  text-align: center;
+  padding: 13px 0;
+  color: #FB9205;
+}
+
+.auth__form-block:not(:nth-last-child(-n+2)) {
+  margin-bottom: 17px;
+}
+
+.auth__form-items {
+  width: 100%;
+  position: relative;
+  padding: 5px 18px;
+  border-radius: 7px;
+  background-color: #FFFFFF;
+}
+.auth__form-items img {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  margin-left: 10px;
+}
+.auth__form-items .auth__input-titel {
+  font-size: 13px;
+}
+.auth__form-items input[type=text],
+.auth__form-items input[type=password],
+.auth__form-items input[type=email] {
+  font-size: 16px;
+}
+.auth__form-items input[type=text]:-webkit-autofill,
+.auth__form-items input[type=password]:-webkit-autofill,
+.auth__form-items input[type=email]:-webkit-autofill {
+  -webkit-transition: all 5000000s ease-in-out;
+  transition: all 5000000s ease-in-out;
+}
+.auth__form-items input[type=text]:nth-last-child(2),
+.auth__form-items input[type=password]:nth-last-child(2),
+.auth__form-items input[type=email]:nth-last-child(2) {
+  width: 95%;
+}
+.auth__form-items input[type=text]::-webkit-input-placeholder, .auth__form-items input[type=password]::-webkit-input-placeholder, .auth__form-items input[type=email]::-webkit-input-placeholder {
+  text-decoration: none;
+}
+.auth__form-items input[type=text]::-moz-placeholder, .auth__form-items input[type=password]::-moz-placeholder, .auth__form-items input[type=email]::-moz-placeholder {
+  text-decoration: none;
+}
+.auth__form-items input[type=text]:-ms-input-placeholder, .auth__form-items input[type=password]:-ms-input-placeholder, .auth__form-items input[type=email]:-ms-input-placeholder {
+  text-decoration: none;
+}
+.auth__form-items input[type=text]::-ms-input-placeholder, .auth__form-items input[type=password]::-ms-input-placeholder, .auth__form-items input[type=email]::-ms-input-placeholder {
+  text-decoration: none;
+}
+.auth__form-items input[type=text]::placeholder,
+.auth__form-items input[type=password]::placeholder,
+.auth__form-items input[type=email]::placeholder {
+  text-decoration: none;
+}
+
+.auth__button {
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #FB9205;
+  margin-top: 30px;
+  -webkit-transition: background-color 0.2s ease-in-out;
+  -o-transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
+}
+.auth__button:hover {
+  background-color: #FFB411;
+}
+
+.auth__link-img--margin-right {
+  margin-right: 5px;
+}
+
+.auth__line {
+  margin: 22px 0px;
+}
+
+.auth__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.auth__link a {
+  gap: 10px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  color: #FB9205;
+}
+.auth__link a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 462px) {
+  .auth__form-items .auth__input-titel {
+    font-size: 12px;
+  }
+  .auth__form-items input[type=text],
+  .auth__form-items input[type=password],
+  .auth__form-items input[type=email] {
+    font-size: 14px;
+  }
+}/*# sourceMappingURL=auth.css.map */

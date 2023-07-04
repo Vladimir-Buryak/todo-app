@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+   <%- include("./partials/head.ejs")%>
+      <link rel="stylesheet" href="style/auth.css">
+</head>
+
+<body>
+   <div class="wrapper">
+      <div class="container">
+         <div class="auth">
+            <div class="auth__logo">
+               <div class="auth__titel">
+                  <h1>TO-DO</h1>
+                  <h2>List</h2>
+               </div>
+            </div>
+            <div class="auth__sub-titel">
+               <hr>
+               <h2>Реєстрація</h2>
+               <hr>
+            </div>
+            <form class="auth__form" action="#" id="form" novalidate>
+               <div class="auth__form-block">
+                  <div class="auth__form-items">
+                     <h2 class="auth__input-titel">Ім'я</h2>
+                     <input class="auth__input" type="text" name="first_name" placeholder="Софія" autocomplete="name">
+                  </div>
+               </div>
+               <div class="auth__form-block">
+                  <div class="auth__form-items">
+                     <h2 class="auth__input-titel">Прізвище</h2>
+                     <input class="auth__input" type="text" name="last_name" placeholder="Костянтинова"
+                        autocomplete="name">
+                  </div>
+               </div>
+               <div class="auth__form-block">
+                  <div class="auth__form-items">
+                     <h2 class="auth__input-titel">Email</h2>
+                     <input class="auth__input" type="email" name="email" placeholder="name@gmail.com"
+                        autocomplete="email">
+                  </div>
+               </div>
+               <div class="auth__form-block">
+                  <div class="auth__form-items">
+                     <h2 class="auth__input-titel">Пароль</h2>
+                     <input class="auth__input _check" type="password" name="password" placeholder="пароль"
+                        autocomplete="new-password">
+                     <img class="auth__icon auth__icon--visible" src="image/pass-off.svg" alt="icon">
+                  </div>
+               </div>
+               <div class="auth__form-block">
+                  <div class="auth__form-items">
+                     <h2 class="auth__input-titel">Підтвердження паролю</h2>
+                     <input class="auth__input" type="password" placeholder="пароль" autocomplete="new-password">
+                     <img class="auth__icon auth__icon--visible" src="image/pass-off.svg" alt="icon">
+                  </div>
+               </div>
+               <button class="auth__button">
+                  Зареєструватися
+               </button>
+            </form>
+            <hr class="auth__line">
+            <div class="auth__link">
+               <a href="/login">Увійти <img src="image/log-in.svg" alt="log-in"></a>
+            </div>
+         </div>
+      </div>
+   </div>
+   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+   <script type="module" src="javascript/signup.js"></script>
+</body>
+
+</html>
